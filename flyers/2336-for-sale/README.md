@@ -8,7 +8,8 @@ One-page, full-bleed US Letter flyer for the craftsman two-story at 2336 Gray Dr
 | `flyer-preview.png` | Image preview for email or social |
 | `flyer.html` | Source layout (edit text here) |
 | `render.cjs` | Rebuilds the PDF and PNG from `flyer.html` |
-| `images/` | Listing photos |
+| `images/` | Listing photos. `exterior-flowers.jpg` is `exterior.jpg` with flowers digitally added to the front beds; the original is kept unchanged |
+| `add_flowers.py` | Recreates `exterior-flowers.jpg` from the original (`pip install pillow numpy scipy`) |
 | `fonts/` | DM Serif Display and Figtree (SIL Open Font License), bundled so the PDF renders the same anywhere |
 
 ## Editing
@@ -19,6 +20,8 @@ The address (2336 Gray Dr, Northlake, TX 76247) and showing contact (310-920-221
 npm install playwright   # once, if not already installed
 node render.cjs
 ```
+
+The front photo carries a "Flowers digitally added" label because the plantings aren't there in real life. Most listing rules require that disclosure on altered photos.
 
 ## Monthly payment estimate
 

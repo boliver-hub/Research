@@ -36,7 +36,12 @@
 
   /* Top: hero photo + title panel */
   .top { display: flex; height: 424px; }
+  .hero-wrap { position: relative; width: 500px; height: 424px; margin: 0; }
   .hero { width: 500px; height: 424px; object-fit: cover; object-position: 50% 100%; display: block; }
+  .hero-wrap figcaption {
+    position: absolute; left: 10px; bottom: 10px; padding: 4px 8px; border-radius: 3px;
+    background: rgba(31, 42, 54, .8); color: var(--cream); font-size: 12px; font-weight: 500;
+  }
   .panel {
     width: 316px; box-sizing: border-box; padding: 44px 40px 38px; background: var(--slate); color: var(--cream);
     display: flex; flex-direction: column; justify-content: space-between;
@@ -99,7 +104,10 @@
 <main class="page">
 
   <section class="top">
-    <img class="hero" src="images/exterior.jpg" alt="Front of the two-story craftsman home: blue lap and shake siding, brick base, covered front porch and stone-edged garden beds">
+    <figure class="hero-wrap">
+      <img class="hero" src="images/exterior-flowers.jpg" alt="Front of the two-story craftsman home: blue lap and shake siding, brick base, covered front porch and stone-edged beds planted with flowers">
+      <figcaption>Flowers digitally added</figcaption>
+    </figure>
     <div class="panel">
       <div>
         <div class="eyebrow">Craftsman Two-Story</div>
