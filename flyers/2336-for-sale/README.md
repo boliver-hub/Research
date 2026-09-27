@@ -1,6 +1,6 @@
 # 2336 For-Sale Flyer
 
-One-page, full-bleed US Letter flyer for the craftsman two-story at 2336.
+One-page, full-bleed US Letter flyer for the craftsman two-story at 2336 Gray Dr, Northlake, TX 76247.
 
 | File | What it is |
 | --- | --- |
@@ -11,12 +11,9 @@ One-page, full-bleed US Letter flyer for the craftsman two-story at 2336.
 | `images/` | Listing photos |
 | `fonts/` | DM Serif Display and Figtree (SIL Open Font License), bundled so the PDF renders the same anywhere |
 
-## Before printing
+## Editing
 
-Fill in the bracketed placeholders in `flyer.html`, then re-render:
-
-- `2336 [STREET], [CITY, STATE]`: full property address
-- `[AGENT NAME]`, `[PHONE]`, `[EMAIL]`: showing contact
+The address (2336 Gray Dr, Northlake, TX 76247) and showing contact (310-920-2211, blake.oliver@gmail.com) are in `flyer.html`. After any edit, re-render:
 
 ```sh
 npm install playwright   # once, if not already installed

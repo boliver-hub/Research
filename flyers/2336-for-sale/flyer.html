@@ -45,7 +45,8 @@
   .panel .eyebrow { color: var(--cream-dim); }
   .panel h1 { margin: 16px 0 0; font-size: 100px; line-height: .9; color: var(--cream); }
   .price { font-size: 50px; line-height: 1; color: var(--brick-light); }
-  .address { margin-top: 10px; font-size: 14px; color: var(--cream-dim); }
+  .street { margin-top: 12px; font-size: 20px; font-weight: 600; color: var(--cream); }
+  .address { margin-top: 2px; font-size: 14px; color: var(--cream-dim); }
 
   /* Body */
   .body {
@@ -90,7 +91,8 @@
     background: var(--slate); color: var(--cream); display: flex; align-items: center; justify-content: space-between; gap: 24px;
   }
   .footer .serif { font-size: 24px; }
-  .contact { display: flex; gap: 18px; font-size: 14px; font-weight: 600; color: var(--cream); }
+  .contact { display: flex; gap: 22px; font-size: 16px; font-weight: 600; }
+  .contact a { color: var(--cream); text-decoration: none; }
 </style>
 </head>
 <body>
@@ -105,7 +107,8 @@
       </div>
       <div>
         <div class="price serif">$419,000</div>
-        <div class="address">2336 [STREET], [CITY, STATE]</div>
+        <div class="street">2336 Gray Dr</div>
+        <div class="address">Northlake, TX 76247</div>
       </div>
     </div>
   </section>
@@ -159,13 +162,13 @@
         </div>
       </div>
 
-      <p class="note">*Illustrative estimate, not a loan offer. Rate is the Freddie Mac <span style="white-space: nowrap">30-year</span> average for Sept. 24, 2026; taxes assumed at 2.2% of price per year, insurance at $2,400/yr. HOA dues and utilities not included.</p>
+      <p class="note">*Illustrative estimate, not a loan offer. Rate is the Freddie Mac <span style="white-space: nowrap">30-year</span> average for Sept. 24, 2026; taxes assumed at 2.2% of price per year, insurance at $2,400/yr. Excludes HOA and utilities.</p>
     </div>
   </section>
 
   <footer class="footer">
     <div class="serif">Schedule a private showing</div>
-    <div class="contact"><span>[AGENT NAME]</span><span>[PHONE]</span><span>[EMAIL]</span></div>
+    <div class="contact"><a href="tel:+13109202211">310-920-2211</a><a href="mailto:blake.oliver@gmail.com">blake.oliver@gmail.com</a></div>
   </footer>
 
 </main>
