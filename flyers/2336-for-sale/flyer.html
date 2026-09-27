@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=816">
+<title>2336 For-Sale Flyer</title>
+<style>
+  /* Fonts are bundled (SIL OFL, see fonts/) so the flyer renders the same offline and in print */
+  @font-face { font-family: "DM Serif Display"; font-style: normal; font-weight: 400; src: url(fonts/DMSerifDisplay-Regular-latin.woff2) format("woff2"); }
+  @font-face { font-family: "Figtree"; font-style: normal; font-weight: 300 900; src: url(fonts/Figtree-Variable-latin.woff2) format("woff2"); }
+
+  /* Letter, full bleed: 8.5in x 11in = 816 x 1056 CSS px */
+  @page { size: letter; margin: 0; }
+  :root {
+    --slate: #2b3d50;
+    --ink: #1f2a36;
+    --muted: #4f5b69;
+    --cream: #f7f3ea;
+    --cream-dim: #d8cbb5;
+    --brick: #a4492f;
+    --brick-light: #eba684;
+    --brick-tint: #f1e2d6;
+    --line: #d9cfbd;
+  }
+  html, body { margin: 0; background: #e9e4da; }
+  body { font-family: "Figtree", "Segoe UI", system-ui, sans-serif; color: var(--ink); }
+  .serif { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; }
+  .page {
+    position: relative; width: 816px; height: 1056px; margin: 24px auto;
+    background: var(--cream); overflow: hidden; box-shadow: 0 2px 18px rgba(0,0,0,.18);
+  }
+  @media print {
+    html, body { background: var(--cream); }
+    .page { margin: 0; box-shadow: none; }
+  }
+
+  /* Top: hero photo + title panel */
+  .top { display: flex; height: 424px; }
+  .hero { width: 500px; height: 424px; object-fit: cover; object-position: 50% 100%; display: block; }
+  .panel {
+    width: 316px; box-sizing: border-box; padding: 44px 40px 38px; background: var(--slate); color: var(--cream);
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+  .panel .eyebrow { color: var(--cream-dim); }
+  .panel h1 { margin: 16px 0 0; font-size: 100px; line-height: .9; color: var(--cream); }
+  .price { font-size: 50px; line-height: 1; color: var(--brick-light); }
+  .address { margin-top: 10px; font-size: 14px; color: var(--cream-dim); }
+
+  /* Body */
+  .body {
+    position: absolute; top: 448px; left: 40px; right: 40px;
+    display: grid; grid-template-columns: 340px minmax(0, 1fr); column-gap: 26px;
+  }
+  .photos { display: flex; flex-direction: column; gap: 16px; }
+  .photo { position: relative; margin: 0; }
+  .photo img { width: 340px; height: 238px; object-fit: cover; display: block; border-radius: 4px; }
+  .photo figcaption {
+    position: absolute; left: 10px; bottom: 10px; padding: 5px 10px; border-radius: 3px;
+    background: rgba(31, 42, 54, .9); color: var(--cream); font-size: 12px; font-weight: 600; letter-spacing: .02em;
+  }
+
+  .right { display: flex; flex-direction: column; gap: 16px; }
+  .feature { display: grid; grid-template-columns: 40px minmax(0, 1fr); column-gap: 14px; align-items: start; }
+  .icon {
+    width: 40px; height: 40px; border-radius: 50%; background: var(--brick-tint); color: var(--brick);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .icon svg { width: 22px; height: 22px; }
+  .feature h2 { margin: 1px 0 4px; font-size: 21px; line-height: 1.15; color: var(--slate); }
+  .feature p { margin: 0; font-size: 14px; line-height: 1.45; color: var(--ink); text-wrap: pretty; }
+
+  .cost { background: #fffdf8; border: 1px solid var(--line); border-radius: 6px; padding: 16px 20px 14px; }
+  .cost .eyebrow { color: var(--brick); }
+  .cost-total { display: flex; align-items: baseline; gap: 6px; margin-top: 4px; }
+  .cost-total .serif { font-size: 46px; line-height: 1; color: var(--slate); }
+  .cost-total span:last-child { font-size: 16px; font-weight: 600; color: var(--muted); }
+  .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 10px 0 8px; padding: 8px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .stat { display: flex; flex-direction: column; gap: 2px; }
+  .stat span:first-child { font-size: 12px; color: var(--muted); }
+  .stat span:last-child { font-size: 15px; font-weight: 700; color: var(--ink); }
+  .rows { display: flex; flex-direction: column; gap: 3px; }
+  .row { display: flex; justify-content: space-between; font-size: 14px; line-height: 1.4; }
+  .row span:last-child { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .note { margin: 0; font-size: 12px; line-height: 1.4; color: var(--muted); text-wrap: pretty; }
+
+  /* Footer */
+  .footer {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 76px; box-sizing: border-box; padding: 0 40px;
+    background: var(--slate); color: var(--cream); display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  }
+  .footer .serif { font-size: 24px; }
+  .contact { display: flex; gap: 18px; font-size: 14px; font-weight: 600; color: var(--cream); }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <section class="top">
+    <img class="hero" src="images/exterior.jpg" alt="Front of the two-story craftsman home: blue lap and shake siding, brick base, covered front porch and stone-edged garden beds">
+    <div class="panel">
+      <div>
+        <div class="eyebrow">Craftsman Two-Story</div>
+        <h1 class="serif">For Sale</h1>
+      </div>
+      <div>
+        <div class="price serif">$419,000</div>
+        <div class="address">2336 [STREET], [CITY, STATE]</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="body">
+    <div class="photos">
+      <figure class="photo">
+        <img src="images/primary-suite.jpg" alt="Primary bedroom with en-suite bathroom" style="object-position: 50% 60%">
+        <figcaption>Primary suite with en-suite bath</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="images/game-room.jpg" alt="Upstairs game room with ceiling fan and staircase" style="object-position: 50% 50%">
+        <figcaption>Upstairs game room</figcaption>
+      </figure>
+    </div>
+
+    <div class="right">
+      <div class="feature">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="17" height="10" rx="2"/><path d="M22 11v2"/><path d="M11.5 9 9 12.5h3.5L10 15"/></svg>
+        </div>
+        <div>
+          <h2 class="serif">Battery Storage System</h2>
+          <p>Backup power for the essentials during grid outages, plus energy arbitrage: store power when rates are low, use it when they peak.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6L12 3z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
+        </div>
+        <div>
+          <h2 class="serif">Builder's Warranty Through 2032</h2>
+          <p>Coverage remains valid on this home until 2032.</p>
+        </div>
+      </div>
+
+      <div class="cost">
+        <div class="eyebrow">Estimated monthly payment*</div>
+        <div class="cost-total"><span class="serif">$3,205</span><span>/mo</span></div>
+        <div class="stats">
+          <div class="stat"><span>20% down</span><span>$83,800</span></div>
+          <div class="stat"><span>Loan amount</span><span>$335,200</span></div>
+          <div class="stat"><span>30-yr fixed</span><span>7.03%</span></div>
+        </div>
+        <div class="rows">
+          <div class="row"><span>Principal &amp; interest</span><span>$2,237</span></div>
+          <div class="row"><span>Property taxes (est.)</span><span>$768</span></div>
+          <div class="row"><span>Homeowners insurance (est.)</span><span>$200</span></div>
+          <div class="row"><span>Mortgage insurance (PMI)</span><span>$0</span></div>
+        </div>
+      </div>
+
+      <p class="note">*Illustrative estimate, not a loan offer. Rate is the Freddie Mac <span style="white-space: nowrap">30-year</span> average for Sept. 24, 2026; taxes assumed at 2.2% of price per year, insurance at $2,400/yr. HOA dues and utilities not included.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="serif">Schedule a private showing</div>
+    <div class="contact"><span>[AGENT NAME]</span><span>[PHONE]</span><span>[EMAIL]</span></div>
+  </footer>
+
+</main>
+</body>
+</html>
