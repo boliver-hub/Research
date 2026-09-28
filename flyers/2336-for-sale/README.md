@@ -23,14 +23,20 @@ node render.cjs
 
 The front photo carries a "Flowers digitally added" label because the plantings aren't there in real life. Most listing rules require that disclosure on altered photos.
 
-## Monthly payment estimate
+## Estimated mortgage payment
 
-| Item | Monthly | Basis |
-| --- | --- | --- |
-| Principal & interest | $2,237 | $335,200 loan ($419,000 − 20% down of $83,800), 30-year fixed at 7.03% |
-| Property taxes | $768 | Assumed 2.2% of price per year |
-| Homeowners insurance | $200 | Assumed $2,400 per year |
-| PMI | $0 | Not required with 20% down |
-| **Total** | **$3,205** | HOA dues and utilities not included |
+The flyer shows principal and interest only, per the seller's direction: **$2,237/mo**.
 
-The 7.03% rate is Freddie Mac's Primary Mortgage Market Survey 30-year fixed average for the week of Sept. 24, 2026. Replace the tax rate and insurance figure with the property's actual numbers if you have them. The figures are hardcoded in `flyer.html`, so update the breakdown and the total together.
+| Input | Value |
+| --- | --- |
+| Price | $419,000 |
+| Down payment | 20% ($83,800) |
+| Loan amount | $335,200 |
+| Term and rate | 30-year fixed at 7.03% (Freddie Mac PMMS average, week of Sept. 24, 2026) |
+
+Taxes, insurance and HOA dues are excluded. Because the flyer states a payment amount, federal Truth in Lending advertising rules (12 CFR 1026.24) require saying next to it that taxes and insurance aren't included and the actual payment will be higher. That line sits under the figure, and the footnote carries the down payment and loan terms. The rules also call for an APR whenever a payment or rate is advertised; add one from a lender if available.
+
+## Placeholders to fill
+
+- `[XXXX]` sq ft (Craftsman 4-Bedroom Home block)
+- `[XXX]` kWh battery capacity (Power Storage System block)

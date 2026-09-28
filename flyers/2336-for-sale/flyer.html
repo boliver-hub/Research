@@ -56,17 +56,17 @@
   /* Body */
   .body {
     position: absolute; top: 448px; left: 40px; right: 40px;
-    display: grid; grid-template-columns: 340px minmax(0, 1fr); column-gap: 26px;
+    display: grid; grid-template-columns: 320px minmax(0, 1fr); column-gap: 26px;
   }
   .photos { display: flex; flex-direction: column; gap: 16px; }
   .photo { position: relative; margin: 0; }
-  .photo img { width: 340px; height: 238px; object-fit: cover; display: block; border-radius: 4px; }
+  .photo img { width: 320px; height: 244px; object-fit: cover; display: block; border-radius: 4px; }
   .photo figcaption {
     position: absolute; left: 10px; bottom: 10px; padding: 5px 10px; border-radius: 3px;
     background: rgba(31, 42, 54, .9); color: var(--cream); font-size: 12px; font-weight: 600; letter-spacing: .02em;
   }
 
-  .right { display: flex; flex-direction: column; gap: 16px; }
+  .right { display: flex; flex-direction: column; gap: 12px; }
   .feature { display: grid; grid-template-columns: 40px minmax(0, 1fr); column-gap: 14px; align-items: start; }
   .icon {
     width: 40px; height: 40px; border-radius: 50%; background: var(--brick-tint); color: var(--brick);
@@ -76,18 +76,12 @@
   .feature h2 { margin: 1px 0 4px; font-size: 21px; line-height: 1.15; color: var(--slate); }
   .feature p { margin: 0; font-size: 14px; line-height: 1.45; color: var(--ink); text-wrap: pretty; }
 
-  .cost { background: #fffdf8; border: 1px solid var(--line); border-radius: 6px; padding: 16px 20px 14px; }
+  .cost { background: #fffdf8; border: 1px solid var(--line); border-radius: 6px; padding: 14px 20px 12px; }
   .cost .eyebrow { color: var(--brick); }
   .cost-total { display: flex; align-items: baseline; gap: 6px; margin-top: 4px; }
   .cost-total .serif { font-size: 46px; line-height: 1; color: var(--slate); }
   .cost-total span:last-child { font-size: 16px; font-weight: 600; color: var(--muted); }
-  .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 10px 0 8px; padding: 8px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .stat { display: flex; flex-direction: column; gap: 2px; }
-  .stat span:first-child { font-size: 12px; color: var(--muted); }
-  .stat span:last-child { font-size: 15px; font-weight: 700; color: var(--ink); }
-  .rows { display: flex; flex-direction: column; gap: 3px; }
-  .row { display: flex; justify-content: space-between; font-size: 14px; line-height: 1.4; }
-  .row span:last-child { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .pi-note { margin: 6px 0 0; font-size: 12px; line-height: 1.4; color: var(--muted); }
   .note { margin: 0; font-size: 12px; line-height: 1.4; color: var(--muted); text-wrap: pretty; }
 
   /* Footer */
@@ -136,11 +130,21 @@
     <div class="right">
       <div class="feature">
         <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-6h4v6"/></svg>
+        </div>
+        <div>
+          <h2 class="serif">Craftsman 4-Bedroom Home</h2>
+          <p>[XXXX] sq ft, 4 bedrooms, 3 bathrooms. Meticulously kept, smoke-free home.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="17" height="10" rx="2"/><path d="M22 11v2"/><path d="M11.5 9 9 12.5h3.5L10 15"/></svg>
         </div>
         <div>
-          <h2 class="serif">Battery Storage System</h2>
-          <p>Backup power for the essentials during grid outages, plus energy arbitrage: store power when rates are low, use it when they peak.</p>
+          <h2 class="serif">Power Storage System for Ultra Low Electric Bills</h2>
+          <p>Professionally installed, programmable [XXX] kWh system charges on low nighttime electric rates, then powers the house in the afternoon to avoid <span style="white-space: nowrap">high-priced</span> electricity. Also provides emergency power for the entire house during outages.</p>
         </div>
       </div>
 
@@ -155,22 +159,12 @@
       </div>
 
       <div class="cost">
-        <div class="eyebrow">Estimated monthly payment*</div>
-        <div class="cost-total"><span class="serif">$3,205</span><span>/mo</span></div>
-        <div class="stats">
-          <div class="stat"><span>20% down</span><span>$83,800</span></div>
-          <div class="stat"><span>Loan amount</span><span>$335,200</span></div>
-          <div class="stat"><span>30-yr fixed</span><span>7.03%</span></div>
-        </div>
-        <div class="rows">
-          <div class="row"><span>Principal &amp; interest</span><span>$2,237</span></div>
-          <div class="row"><span>Property taxes (est.)</span><span>$768</span></div>
-          <div class="row"><span>Homeowners insurance (est.)</span><span>$200</span></div>
-          <div class="row"><span>Mortgage insurance (PMI)</span><span>$0</span></div>
-        </div>
+        <div class="eyebrow">Estimated mortgage payment*</div>
+        <div class="cost-total"><span class="serif">$2,237</span><span>/mo</span></div>
+        <p class="pi-note">Principal &amp; interest only. Does not include taxes or insurance; actual payment will be higher.</p>
       </div>
 
-      <p class="note">*Illustrative estimate, not a loan offer. Rate is the Freddie Mac <span style="white-space: nowrap">30-year</span> average for Sept. 24, 2026; taxes assumed at 2.2% of price per year, insurance at $2,400/yr. Excludes HOA and utilities.</p>
+      <p class="note">*Not a loan offer. Assumes a $419,000 price, 20% down ($83,800) and a <span style="white-space: nowrap">30-year</span> fixed interest rate of 7.03% (Freddie Mac average, Sept. 24, 2026). Rate shown is not an APR. Excludes HOA dues.</p>
     </div>
   </section>
 
