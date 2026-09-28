@@ -35,7 +35,3 @@ The flyer shows principal and interest only, per the seller's direction: **$2,23
 | Term and rate | 30-year fixed at 7.03% (Freddie Mac PMMS average, week of Sept. 24, 2026) |
 
 Taxes, insurance and HOA dues are excluded. Because the flyer states a payment amount, federal Truth in Lending advertising rules (12 CFR 1026.24) require saying next to it that taxes and insurance aren't included and the actual payment will be higher. That line sits under the figure, and the footnote carries the down payment and loan terms. The rules also call for an APR whenever a payment or rate is advertised; add one from a lender if available.
-
-## Placeholders to fill
-
-- `[XXX]` kWh battery capacity (Power Storage System block)
