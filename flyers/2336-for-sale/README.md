@@ -38,5 +38,4 @@ Taxes, insurance and HOA dues are excluded. Because the flyer states a payment a
 
 ## Placeholders to fill
 
-- `[XXXX]` sq ft (Craftsman 4-Bedroom Home block)
 - `[XXX]` kWh battery capacity (Power Storage System block)
